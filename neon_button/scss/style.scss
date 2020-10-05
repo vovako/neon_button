@@ -1,0 +1,270 @@
+$electric-green: #00FF00;
+$neon-carrot: #FFA64D;
+$laser-yellow: #FFFF19;
+$neon-fuchsia: #FF4DC4;
+$red: red;
+$electric-blue: #66FFFF;
+$bg: #050801;
+
+body {
+    background: $bg;
+}
+
+.wrapper {
+    font-family: consolas;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10%;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        padding: 100px 4%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+    }
+}
+
+.button {
+    position: relative;
+    padding: 25px 30px;
+    color: $neon-fuchsia;
+    text-align: center;
+    margin: 0 50px 120px;
+    background: $bg;
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+    @media screen and (max-width: 767px) {
+        width: 300px;
+        margin: 0 auto 120px;
+    }
+
+    span {
+        position: absolute;
+        display: block;
+
+        &:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, $neon-fuchsia);
+        }
+
+        &:nth-child(2) {
+            right: 0;
+            top: -100%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, $neon-fuchsia);
+        }
+
+        &:nth-child(3) {
+            right: -100%;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to left, transparent, $neon-fuchsia);
+        }
+
+        &:nth-child(4) {
+            left: 0;
+            bottom: -100%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to top, transparent, $neon-fuchsia);
+        }
+    }
+
+    &:hover {
+        transition-delay: 1s;
+        background: $neon-fuchsia;
+        color: #050801;
+        box-shadow: 0 0 5px $neon-fuchsia,
+            0 0 25px $neon-fuchsia,
+            0 0 50px $neon-fuchsia,
+            0 0 200px $neon-fuchsia;
+
+        span {
+            transition: 1s;
+
+            &:nth-child(1) {
+                left: 100%;
+            }
+
+            &:nth-child(2) {
+                top: 100%;
+                transition-delay: 0.25s;
+            }
+
+            &:nth-child(3) {
+                right: 100%;
+                transition-delay: 0.50s;
+            }
+
+            &:nth-child(4) {
+                bottom: 100%;
+                transition-delay: 0.75s;
+            }
+        }
+    }
+}
+
+.red {
+    color: $red;
+
+    &:hover {
+        background: $red;
+        box-shadow: 0 0 5px $red,
+            0 0 25px $red,
+            0 0 50px $red,
+            0 0 200px $red;
+    }
+
+    span {
+        &:nth-child(1) {
+            background: linear-gradient(to right, transparent, $red);
+        }
+
+        &:nth-child(2) {
+            background: linear-gradient(to bottom, transparent, $red);
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(to right, transparent, $red);
+        }
+
+        &:nth-child(4) {
+            background: linear-gradient(to bottom, transparent, $red);
+        }
+    }
+}
+
+.yellow {
+    color: $laser-yellow;
+
+    &:hover {
+        background: $laser-yellow;
+        box-shadow: 0 0 5px $laser-yellow,
+            0 0 25px $laser-yellow,
+            0 0 50px $laser-yellow,
+            0 0 200px $laser-yellow;
+    }
+
+    span {
+        &:nth-child(1) {
+            background: linear-gradient(to right, transparent, $laser-yellow);
+        }
+
+        &:nth-child(2) {
+            background: linear-gradient(to bottom, transparent, $laser-yellow);
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(to right, transparent, $laser-yellow);
+        }
+
+        &:nth-child(4) {
+            background: linear-gradient(to bottom, transparent, $laser-yellow);
+        }
+    }
+}
+
+.green {
+    color: $electric-green;
+
+    &:hover {
+        background: $electric-green;
+        box-shadow: 0 0 5px $electric-green,
+            0 0 25px $electric-green,
+            0 0 50px $electric-green,
+            0 0 200px $electric-green;
+    }
+
+    span {
+        &:nth-child(1) {
+            background: linear-gradient(to right, transparent, $electric-green);
+        }
+
+        &:nth-child(2) {
+            background: linear-gradient(to bottom, transparent, $electric-green);
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(to right, transparent, $electric-green);
+        }
+
+        &:nth-child(4) {
+            background: linear-gradient(to bottom, transparent, $electric-green);
+        }
+    }
+}
+
+.blue {
+    color: $electric-blue;
+
+    &:hover {
+        background: $electric-blue;
+        box-shadow: 0 0 5px $electric-blue,
+            0 0 25px $electric-blue,
+            0 0 50px $electric-blue,
+            0 0 200px $electric-blue;
+    }
+
+    span {
+        &:nth-child(1) {
+            background: linear-gradient(to right, transparent, $electric-blue);
+        }
+
+        &:nth-child(2) {
+            background: linear-gradient(to bottom, transparent, $electric-blue);
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(to right, transparent, $electric-blue);
+        }
+
+        &:nth-child(4) {
+            background: linear-gradient(to bottom, transparent, $electric-blue);
+        }
+    }
+}
+
+.carrot {
+    color: $neon-carrot;
+
+    &:hover {
+        background: $neon-carrot;
+        box-shadow: 0 0 5px $neon-carrot,
+            0 0 25px $neon-carrot,
+            0 0 50px $neon-carrot,
+            0 0 200px $neon-carrot;
+    }
+
+    span {
+        &:nth-child(1) {
+            background: linear-gradient(to right, transparent, $neon-carrot);
+        }
+
+        &:nth-child(2) {
+            background: linear-gradient(to bottom, transparent, $neon-carrot);
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(to right, transparent, $neon-carrot);
+        }
+
+        &:nth-child(4) {
+            background: linear-gradient(to bottom, transparent, $neon-carrot);
+        }
+    }
+}
